@@ -31,7 +31,7 @@ pip install -r requirements.txt
 
 echo "##### Installing code coverage and pytest modules ####"
 pip install coverage
-pip install pytest-cov
+pip install pytest-cov.
 
 echo '#### Runing tests ####'
 pytest --cov=main --cov-report xml
