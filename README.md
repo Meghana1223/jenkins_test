@@ -1,5 +1,7 @@
-Notes:- 
+Class Notes:- 
 https://docs.google.com/document/d/1i0K59XkCXBQrA3AMMzIzreHrgSOprTYkzAoLOfUjim8/edit
+
+
 
 
 Flask App:
@@ -12,6 +14,76 @@ Flask App:
 -code coverate (Cobertura tool)
 
 -run unit test cases using pytest 
+
+
+
+Jenkins CI/CD Execute shell sequence commands:
+
+
+pyenv versions
+
+echo "#### activating python version 3.8 ####"
+
+pyenv global pypy3.8-7.3.11
+
+pyenv -V
+
+
+
+echo "#### Creating flaskapp virtual env ####"
+
+python -m venv flaskapp
+
+
+
+echo "#### Activating flaskapp virtual env ####"
+
+source flaskapp/bin/activate
+
+
+
+
+echo "##### Installing required Python Modules ####"
+
+pip install -r requirements.txt
+
+
+
+
+echo "##### Installing code coverage and pytest modules ####"
+
+pip install coverage
+
+pip install pytest-cov
+
+
+
+
+
+echo '#### Running unit tests cases  ####'
+
+pytest --cov=main --cov-report xml
+
+pytest utests --junitxml=./xmlReport/output.xml
+
+
+
+
+
+echo "##### Deactivating venv and reset python version to system ####"
+
+deactivate
+
+pyenv global system 
+
+python -V
+
+
+
+
+*Unit test cases running on the xml.file
+
+
 
 
 
