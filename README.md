@@ -1,6 +1,5 @@
-# jenkins_test
-
-Notes:- https://docs.google.com/document/d/1i0K59XkCXBQrA3AMMzIzreHrgSOprTYkzAoLOfUjim8/edit
+Notes:- 
+https://docs.google.com/document/d/1i0K59XkCXBQrA3AMMzIzreHrgSOprTYkzAoLOfUjim8/edit
 
 
 Flask App:
@@ -31,7 +30,7 @@ pip install -r requirements.txt
 
 echo "##### Installing code coverage and pytest modules ####"
 pip install coverage
-pip install pytest-cov.
+pip install pytest-cov
 
 echo '#### Runing tests ####'
 pytest --cov=main --cov-report xml
